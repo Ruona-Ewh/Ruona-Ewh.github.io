@@ -1,0 +1,280 @@
+/* styling for layout goes here */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+body{
+  font-family: 'Manrope', sans-serif;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(left, #36b2b2,  rgb(243, 233, 233));
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* styling for signup, login*/
+  input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+
+  input[type=email] {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical
+  }
+
+  input[type=password] {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical
+  }
+
+  input[type=url] {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical
+  }
+
+
+  input[type=submit] {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: default;
+  }
+
+  input[type=submit]:hover {
+    background-color: #808080;
+  }
+  
+
+  button {
+    background-color: rgb(3, 81, 81);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: default;
+  }
+
+
+  .centre {
+    text-align: center;
+  }
+
+
+.wrapper{
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+  }
+
+  
+/* styling for about page */
+.about{ 
+    border-radius: 5px;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    text-align: center;
+    
+  
+  }
+  
+
+  
+  /* styling for homepage */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #131a1c;
+    padding: 1rem;
+    
+}
+
+.nav-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+}
+
+
+.nav-2{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  
+}
+    
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+span{
+    color: aqua;
+}
+
+.nav-2 a .sign-up{
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: aqua;
+    color: #131a1c;
+}
+
+
+
+/* styling for flash messages */
+.flashes {
+text-align: center;
+list-style: none;
+width: 30%;
+border: 3px black;
+padding: 15px;
+margin: 2px;
+background-color: #808080;
+}
+
+
+
+.centrer {
+  text-align: center;
+  font-size: 2rem;
+  color:rgb(3, 81, 81);
+
+  
+}
+
+
+/* style for table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table tr {
+  background-color: white;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+.custom-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+
+/* dashboard */
+.dashboard {
+  padding: 100px 20px;
+  max-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+  justify-items: center;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.box {
+  width: 100%;
+  border: 2px black solid;
+  padding: 15px;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.box-content {
+  width: auto;
+  text-align: center;
+  
+}
+
+.box-content p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+ 
+}
+
+.qr-code-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}

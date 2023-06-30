@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Link History{% endblock title %}
+{% block content %}
+<section class="table-wrapper">
+    {% if urls %}
+    <h1 class="centrer">URL History</h1>
+    <br>
+    <div class="custom-table">
+      <table>
+        <thead>
+            <tr>
+              <th>Short URL</th>
+              <th>Original URL</th>
+              <th>Date Created</th>
+              <th>Delete</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for url in urls %}
+            
+            <tr>
+            <td><a href="{{ url_for('redirect_url', short_url=url.short_url) }}" target="_blank">{{host}}{{url.short_url}}</a></td>
+            <td>{{ url.original_url }}</td>
+            <td>{{ url.date_created.strftime('%I:%M%p %B %d, %Y') }}</td>
+            <td><a href="{{ url_for('delete', short_url=url.short_url) }}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+{% else %}
+<p>Link history is empty.</p>
+{% endif %}
+    </ul>
+{% endblock content %}

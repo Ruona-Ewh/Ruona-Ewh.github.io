@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Edit URL {% endblock title %}
+{% block content %}
+<form method="POST" action="{{ url_for('edit', short_url=url.short_url) }}">
+  <div>
+    <h3 class="centrer">Edit URL</h3>
+  </div>
+  <div  class="wrapper">
+    <div>
+      <label for="original_url">Original URL</label>
+      <input type="text" name="original_url"value="{{url.original_url}}" disabled/>
+    </div>
+    <div>
+      <label for="short_url">Short URL</label>
+      <input type="text" name="short_url" value="{{host}}{{url.short_url}}" disabled/>
+    </div>
+    <div>
+      <label for="custom_url">Modified URL</label>
+      <input type="text" placeholder="{{url.short_url}}" name="custom_url" required/>
+    </div>
+    <div>
+      <input type="submit" value="Update URL" class="button"/>
+    </div>
+  </div>
+</form>
+{% endblock content %}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Slash{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header class="flex-container">
+        {% if current_user.is_authenticated %}
+        <div class="nav-1">
+            <a href="{{ url_for('index') }}"><p>Sl<span>ash</span></p></a>
+        </div>
+        <div class="nav-2">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('history') }}">History</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <span>Hi {{ current_user.username }} !</span>
+        </div>
+        {% else %}
+        <div class="nav-1">
+            <a href="{{ url_for('index') }}"><p>Sl<span>ash</span></p></a>
+        </div>
+        <div class="nav-2">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('signup') }}"><p class="sign-up">Sign Up</p></a>
+        </div>
+        {% endif %}
+        </div>
+    </header>
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="table-wrapper">
+    <div class="centrer">
+    <h1>{% block title %} Analytics{% endblock %}</h1>
+    </div>
+<br>
+    <table class="custom-table">
+        <thead>
+            <tr>
+            <th>Short URL</th>
+            <th>Original URL</th>
+            <th>Visits</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="{{ url_for('redirect_url', short_url=url.short_url) }}" target="_blank">{{host}}{{url.short_url}}</a></td>
+                <td>{{ url.original_url }}</td>
+                <td>{{ url.visits }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+

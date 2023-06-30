@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrapper">
+    <div class="centre">
+        <h1>Login<h1>
+    </div>
+    <br>
+    <form method="POST" action="{{url_for('login')}}" class="">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password"/>
+        </div>
+        <br>
+        <div class="centre">
+            <input type="submit" value="Login">
+        </div>
+        <br>
+        <div class="centre">
+            <small>
+                Don't Have An Account?&nbsp;&nbsp;<a href="{{ url_for('signup') }}"><span>Sign Up</span>></a>
+            </small>
+        </div>
+    </form>
+</div>
+
+{% endblock content %} 

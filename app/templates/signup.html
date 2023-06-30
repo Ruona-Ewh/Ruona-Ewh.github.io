@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrapper">
+    <div class="centre">
+        <h1>Sign Up</h1>
+    </div>
+    <br>
+    <form method="POST" action="{{url_for('signup')}}">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Username" required/>
+          </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password"/>
+        </div>
+        <div>
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" placeholder="Confirm Password"/>
+        </div>
+        <br>
+         <div class="centre">
+            <input type="submit" value="Sign Up">
+        </div>
+        <br>
+        <div class="centre">
+            <small>
+                Already Have An Account?&nbsp;&nbsp;<a href="{{ url_for('login') }}"><span>Login</span></a>
+            </small>
+        </div>
+    </form>
+</div>
+{% endblock content %} 

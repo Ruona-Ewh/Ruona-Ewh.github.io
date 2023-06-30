@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock title %}
+{% block content %}
+{% if current_user.is_authenticated %}
+    {% if urls %}
+        <section class="dashboard">
+            {% for url in urls %}
+                <div class="box">
+                    <div class="box-content">
+                        <img src="{{ url_for('generate_qr_code_url', short_url=url.short_url) }}" alt="QR Code" class="qr-code-image">
+                        <br>
+                        <a href="{{ url_for('generate_qr_code_url', short_url=url.short_url) }}" download="qrcode image" >
+                        <button class="button">Download QR Code</button></a>
+                        <br>
+                        <br>
+                        <p>Short URL <br>
+                        <a href="{{ url_for('redirect_url', short_url=url.short_url) }}" target="_blank">{{host}}{{url.short_url}}</a></p>
+                    
+                        <p>Original URL <br>
+                            <a href="{{ url_for('redirect_url', short_url=url.original_url) }}" target="_blank">{{ url.original_url }}</a></p>
+                        
+                        <p class="date-created">Date Created <br> {{ url.date_created.strftime('%I:%M%p %B %d, %Y') }}</p>                
+                        <a href="{{ url_for('analytics', short_url=url.short_url) }}"> <button class="button">Analytics</button> </a>&nbsp; &nbsp;
+                        <a href="{{ url_for('edit', short_url=url.short_url) }}"><button class="button">Edit URL</button></a>                
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    {% else %}
+        <h3 class="centre">
+          You do not have any URLs yet.&nbsp; <a href="{{url_for('index')}}">Create Some</a>
+        </h3>
+    {% endif %}
+{% else %}
+    <h3 class="centre">
+        <a href="{{url_for('login')}}">Log in</a> to view your URLs
+  </h3>
+{% endif %}
+{% endblock content %}
+
