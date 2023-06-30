@@ -282,6 +282,7 @@ background-color: #808080;
 
 @media (max-width: 840px) {
   .wrapper,
+  .about,
   .table-wrapper {
     width: 100%;
     padding: 1rem;
