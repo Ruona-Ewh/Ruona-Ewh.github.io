@@ -278,3 +278,18 @@ background-color: #808080;
   align-items: center;
   
 }
+
+
+@media (max-width: 840px) {
+  .wrapper,
+  .table-wrapper {
+    width: 100%;
+    padding: 1rem;
+  }
+  .dashboard {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+  }
+}
