@@ -1,2 +1,1 @@
-# Scissors
 # Slash
