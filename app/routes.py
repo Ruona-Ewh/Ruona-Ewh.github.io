@@ -180,8 +180,10 @@ def signup():
 
         db.session.add(new_user)
         db.session.commit()
+        
         flash('Signup successful!')
         return redirect(url_for('index'))
+    
     return render_template('signup.html', title='signup')
 
 
@@ -205,6 +207,7 @@ def login():
             if check_password_hash(old_user.password, password) == False:
                 flash('Invalid username or password')
                 return redirect(url_for('login'))
+    
     return render_template('login.html', title='Login')
 
 
