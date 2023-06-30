@@ -21,6 +21,7 @@ app.config['SECRET_KEY']= os.environ.get('SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['CACHE_TYPE'] = 'SimpleCache'  
 app.config['CACHE_DEFAULT_TIMEOUT'] = 300 
+#postgres://scissors_qcf6_user:kt2hJbuwLioiJlEpAUsUFG7HSfNvvEXy@dpg-cif3o2l9aq09mhgc42k0-a.oregon-postgres.render.com/scissors_qcf6
 
 cache = Cache(app)
 

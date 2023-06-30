@@ -7,7 +7,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30), nullable=False, unique=True)
     email = db.Column(db.String(150), nullable=False, unique=True)
-    password = db.Column(db.Text(60), nullable=False)
+    password = db.Column(db.Text(), nullable=False)
     confirm_password = db.Column(db.Boolean, default=False)
     short_urls = db.relationship("Url", backref="user", lazy=True)
 
