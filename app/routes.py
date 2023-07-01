@@ -134,7 +134,8 @@ def delete(short_url):
 @cache.cached(timeout=30)
 @limiter.limit('10/minutes')
 def generate_qr_code_url(short_url):
-    url = Url.query.filter_by(short_url=short_url).first()
+    url = Url.query.filter_by(user_id=current_user.id).filter_by(short_url=short_url).first()
+    
     if url:
         img_io = generate_qr_code(request.host_url + url.short_url)
         return img_io.getvalue(), 200, {'Content-Type': 'image/png'}

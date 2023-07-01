@@ -17,7 +17,7 @@
                         <a href="{{ url_for('redirect_url', short_url=url.short_url) }}" target="_blank">{{host}}{{url.short_url}}</a></p>
                     
                         <p>Original URL <br>
-                            <a href="{{ url_for('redirect_url', short_url=url.original_url) }}" target="_blank">{{ url.original_url }}</a></p>
+                            <p class="original-url">{{ url.original_url }}</p>
                         
                         <p class="date-created">Date Created <br> {{ url.date_created.strftime('%I:%M%p %B %d, %Y') }}</p>                
                         <a href="{{ url_for('analytics', short_url=url.short_url) }}"> <button class="button">Analytics</button> </a>&nbsp; &nbsp;
