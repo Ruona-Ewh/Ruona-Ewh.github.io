@@ -21,7 +21,7 @@
                         
                         <p class="date-created">Date Created <br> {{ url.date_created.strftime('%I:%M%p %B %d, %Y') }}</p>                
                         <a href="{{ url_for('analytics', short_url=url.short_url) }}"> <button class="button">Analytics</button> </a>&nbsp; &nbsp;
-                        <a href="{{ url_for('edit', short_url=url.short_url) }}"><button class="button">Edit URL</button></a>                
+                        <a href="{{ url_for('edit', short_url=url.short_url) }}"><button class="button">Customise URL</button></a>                
                     </div>
                 </div>
             {% endfor %}

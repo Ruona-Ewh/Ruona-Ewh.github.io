@@ -30,7 +30,7 @@ def generate_qr_code(url):
 def index():
     if request.method == 'POST':
         original_url = request.form['original_url']
-        short_url = request.form['custom_url']
+        short_url = request.form.get('custom_url', generate_short_url())
         existing_url = Url.query.filter_by(user_id=current_user.id).filter_by(original_url=original_url).first()
 
         if existing_url:
@@ -48,9 +48,9 @@ def index():
         db.session.add(url)
         db.session.commit()
         short_url = request.host_url + short_url
-        return render_template('index.html', short_url=short_url)
+        return render_template('index.html', short_url=short_url, url=url)
 
-    return render_template('index.html')
+    return render_template('index.html', url=None)
 
 
 

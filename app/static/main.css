@@ -283,6 +283,7 @@ background-color: #808080;
 @media (max-width: 840px) {
   .wrapper,
   .about,
+  .short-url
   .table-wrapper {
     width: 100%;
     padding: 1rem;
@@ -294,3 +295,30 @@ background-color: #808080;
     justify-content: center;
   }
 }
+
+
+
+
+
+.short-url {
+  margin-top: 900px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+
+
+.short-url input[type="text"] {
+  width: 300px;
+  
+}
+
+.short-url button {
+  margin-left: 10px;
+  
+}
+
+
+
