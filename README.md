@@ -44,7 +44,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#setup">Setup</a></li>
+    <li><a href="#setup">Installation</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -66,7 +66,7 @@ Slash is a URL shortening tool designed to simplify  links. With Slash, you gain
 
 Slash was built as a Capstone project by <a href="https://github.com/Ruona-Ewh/">Ogheneruona Ewherido</a>, a Backend Engineering student at <a href="https://altschoolafrica.com/schools/engineering">AltSchool Africa</a>.
 
-Slash can be accesed via the website: [Slash](Slashh.me)
+Slash can be accesed via the website: [Slash.me](https://Slashh.me)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
