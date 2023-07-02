@@ -68,7 +68,7 @@ Slash was built as a Capstone project by <a href="https://github.com/Ruona-Ewh/"
 
 Slash can be accesed via the website: [Slash.me](https://Slashh.me)
 
-Documentation Link: [Slash Wiki](https://github.com/Ruona-Ewh/Slash/wiki)
+Documentation Link: [Slash Wiki](https://github.com/Ruona-Ewh/Slash/wiki/Slash-documentation)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
